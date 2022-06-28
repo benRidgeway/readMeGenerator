@@ -24,7 +24,7 @@ const questions = () => {
         // Description
         {
             type: "input",
-            name: "Description",
+            name: "description",
             message: "Project Description",
             validate: (nameInput) => {
               if(nameInput) {
@@ -38,7 +38,7 @@ const questions = () => {
         // Installation
         {
             type: "input",
-            name: "Installation",
+            name: "installation",
             message: "How do you install your project?",
             validate: (nameInput) => {
               if(nameInput) {
@@ -52,7 +52,7 @@ const questions = () => {
         // Usage
         {
             type: "input",
-            name: "Project Usage",
+            name: "usage",
             message: "What is your project used for?",
             validate: (nameInput) => {
               if(nameInput) {
@@ -66,7 +66,7 @@ const questions = () => {
         // contributiuons
         {
             type: "input",
-            name: "Contributions",
+            name: "contributions",
             message: "Contribution Guidelines",
             validate: (nameInput) => {
               if(nameInput) {
@@ -80,7 +80,7 @@ const questions = () => {
         // test guidelines
         {
             type: "input",
-            name: "Testing Guidelines",
+            name: "testing",
             message: "Add your projects testing guidelines here",
             validate: (nameInput) => {
               if(nameInput) {
@@ -94,8 +94,9 @@ const questions = () => {
         // License
         {
             type: "list",
-            name: "License",
+            name: "license",
             message: "Your software license for the project",
+            choices: ["MIT", "GPL-3.0", "N/A"],
         //   choices
             validate: (nameInput) => {
               if(nameInput) {
@@ -109,7 +110,7 @@ const questions = () => {
         // Github
         {
             type: "input",
-            name: "Github UserName",
+            name: "github",
             message: "Add your Github UserName here",
             validate: (nameInput) => {
               if(nameInput) {
@@ -123,7 +124,7 @@ const questions = () => {
         // email
         {
             type: "input",
-            name: "Email",
+            name: "email",
             message: "Add your personal email here",
             validate: (nameInput) => {
               if(nameInput) {
