@@ -18,12 +18,7 @@ What are the steps required to install your project? Provide a step-by-step desc
 
 ## Usage
 
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+https://drive.google.com/file/d/1vf0o3LUBk90AFZ4jFF-hvBuE9iF5-GFv/view
 
 ## Credits
 
