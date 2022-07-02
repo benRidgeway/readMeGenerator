@@ -1,7 +1,9 @@
 const fs = require ('fs')
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -25,7 +27,7 @@ function generateMarkdown(data) {
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contributing](#contributing)
-  * [Tests](#tests)
+  * [Tests](#testing)
   * [Github](#github)
   * [Email](#email)
 
@@ -34,8 +36,42 @@ function generateMarkdown(data) {
   ## Description
   ${data.description}
 
-  
+  ##Installation
+  ${data.usage}
+
+  ##Contributing
+  ${data.contributions}
+
+  ##Tests
+  ${data.testing}
+
+  ##GitHub
+  ${data.github}
+
+  ##Email
+  ${data.email}
+
+
 `;
 }
 
-module.exports = generateMarkdown;
+function generatePage (data) {
+  return new Promise((resolve, reject) => {
+    fs.writeFile("./newfile.md", generateMarkdown(data), (err) => {
+      if (err) {
+        reject(err);
+        return;
+      }
+      resolve({ok: true, message: "NewFile created"});
+    });
+  });
+};
+
+
+
+
+
+
+module.exports = { 
+  generatePage,
+ };
